@@ -68,7 +68,7 @@ const HomeScreen = () => {
     )}/>
     </View>
     <View style={{backgroundColor:"black",opacity:0.8,left:380,position:"absolute",height:25,width:70,top:285}}/>
-    <View style={tw`flex flex-row justify-between`}>
+    <View style={tw`flex flex-row justify-between mt-8`}>
 
     <Coffee/>
     <Coffee/>
