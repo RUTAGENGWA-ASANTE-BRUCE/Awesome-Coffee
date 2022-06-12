@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity,Image,TextInput,FlatList } from 'react-native'
 import { LinearGradient } from "expo-linear-gradient";
 import React from 'react'
@@ -6,6 +7,8 @@ import tw from "tailwind-react-native-classnames"
 import {Icon} from "react-native-elements"
 import {useState} from 'react'
 import Coffee from "../components/Coffee"
+import coffee1 from '../assets/coffee2.jpg'
+import coffee2 from '../assets/coffee1.jpeg'
 const selections=[
   {
     id:611,
@@ -24,8 +27,46 @@ const selections=[
     title:'Flat wi',
   }
 ]
+const navigators=[
+  {
+    id:712,
+    icon:"home"
+
+  },
+  {
+    id:353,
+    icon:"book"
+
+  },
+  {
+    id:7744,
+    icon:"heart"
+
+  },
+  {
+    id:533,
+    icon:"notifications"
+
+  }
+]
+const coffees=[
+  {
+    id:4125,
+    madeOf:"Oat milk",
+    coffeePrice:4.20,
+    coffeeImage:coffee1
+  },
+  {
+    id:6635,
+    madeOf:"Chocolate",
+    coffeePrice:3.14,
+    coffeeIamge:coffee2
+  }
+]
 const HomeScreen = () => {
   const [selectedItem,setSelectedItem]=useState(selections[0])
+  const navigator = useNavigation();
+
   return (
     <SafeAreaView style={tw``}>
     
@@ -44,10 +85,10 @@ const HomeScreen = () => {
     </TouchableOpacity>
           <Image source={require("../assets/avatar17.jpg")} style={tw`h-10 w-10 rounded-md`} />
     </View>
-    <Text style={tw`text-3xl mt-10 text-white font-semibold`}>
+    <Text style={tw`text-3xl mt-6 text-white font-semibold`}>
       Find the best 
     </Text>
-    <Text style={tw`text-3xl mt-2 text-white font-semibold`}>
+    <Text style={tw`text-3xl  text-white font-semibold`}>
       Coffee for you
     </Text>
     <View style={{backgroundColor:"#26262b",display:"flex",flexDirection:"row",marginTop:26,width:"100%",borderRadius:6,height:45}}>
@@ -68,11 +109,39 @@ const HomeScreen = () => {
     )}/>
     </View>
     <View style={{backgroundColor:"black",opacity:0.8,left:380,position:"absolute",height:25,width:70,top:285}}/>
-    <View style={tw`flex flex-row justify-between mt-8`}>
+    <View style={tw`flex flex-row justify-between mt-5`}>
 
-    <Coffee/>
-    <Coffee/>
+    <FlatList data={coffees} keyExtractor={(item)=>item.id} renderItem={({item:{id,coffeeImage,madeOf,coffeePrice}})=>(
+      <Coffee coffeeImage={coffeeImage} coffeePrice={coffeePrice} madeOf={madeOf} />
+    )} horizontal />
     </View>
+    <Text style={tw`mt-3 text-xl text-white font-semibold`}>Special for you</Text>
+    <LinearGradient
+            colors={["#3b3b40", "#26262b"]}
+            style={tw`rounded-md w-full mt-2 p-2 h-60 flex flex-row justify-between `}
+        >
+        <Image source={require("../assets/coffee3.jpg")} style={tw`h-20 w-40 rounded-md`}/>
+        <View style={tw`flex flex-col p-3`}>
+          <Text style={tw`text-xl text-white`}> 5 Coffee Beans You</Text>
+          <Text style={tw`text-xl text-white mt-1`}>Must Try !</Text>
+        </View> 
+        </LinearGradient>
+        <LinearGradient
+            colors={["#3b3b40", "#26262b"]}
+            style={tw`rounded-md w-full mt-2 p-2 h-60 flex flex-row justify-between `}
+        >
+        <Image source={require("../assets/coffee3.jpg")} style={tw`h-20 w-40 rounded-md`}/>
+        <View style={tw`flex flex-col p-3`}>
+          <Text style={tw`text-xl text-white`}> 5 Coffee Beans You</Text>
+          <Text style={tw`text-xl text-white mt-1`}>Must Try !</Text>
+        </View> 
+        </LinearGradient> 
+        <FlatList data={navigators} keyExtractor={(item)=>item.id} horizontal style={{position:"absolute",top:650,paddingLeft:15,paddingTop:5,backgroundColor:"#0e0e12",width:500,height:40}} renderItem={({item:{id,icon},item})=>(
+          <TouchableOpacity>
+
+          <Icon name={icon} type="ionicon"  color={item.icon=="home"?"#ba572f":"#454341"} style={tw`mr-20`} />
+          </TouchableOpacity>
+        )} />
     </View>
     </SafeAreaView>
   )
