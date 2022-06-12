@@ -76,7 +76,7 @@ const HomeScreen = () => {
     <LinearGradient
             colors={["#3b3b40", "#26262b",]}
 
-            style={tw`rounded-md w-16 py-2.5 `}
+            style={tw`rounded-md w-12 py-2.5 `}
           >
       
           
