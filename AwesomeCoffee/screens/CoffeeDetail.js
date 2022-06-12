@@ -1,11 +1,11 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { StyleSheet, Text, View,SafeAreaView,Image,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,Image,TouchableOpacity,Pressable,ScrollView } from 'react-native'
 import {Icon} from "react-native-elements"
 import tw from "tailwind-react-native-classnames"
-import React from 'react'
+import React,{useState} from 'react'
 const CoffeeDetail = () => {
   return (
-    <SafeAreaView style={{backgroundColor:"#0e0e12",height:"100%",padding:3,paddingTop:23}}>
+    <ScrollView style={{backgroundColor:"#0e0e12",height:"100%",padding:3,paddingTop:23}}>
       <Image source={require("../assets/coffee2.jpg")} style={tw`w-full rounded-md h-80`} />
       <View style={tw`absolute flex flex-row justify-between w-11/12 top-10 left-5 mr-20`}>
 
@@ -35,7 +35,7 @@ const CoffeeDetail = () => {
           
     </TouchableOpacity>
       </View>
-      <View style={tw`bg-red-300 rounded-xl absolute flex flex-row top-72 left-0.5 p-5 h-40 w-full`}>
+      <View style={tw`bg-red-300 rounded-xl absolute  flex flex-row top-60  p-5 h-40 w-full`}>
         <View style={tw`w-6/12 h-full`}>
         <Text style={tw`mt-1 text-white font-bold text-xl`}>Cappuccino</Text>
         <Text style={tw` text-white text-base font-bold`}>With Oat Milk</Text>
@@ -89,7 +89,25 @@ const CoffeeDetail = () => {
     </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+      <Text style={tw`text-white mt-24 font-semibold text-base`}>Description</Text>
+      <Text style={tw`text-white text-base  mt-2`}>A cappuccino is a coffee-based drink made </Text>
+      <Text style={tw`text-white  text-base`}>primarly from espresso and milk...<Text style={{color:"#ba572f",marginLeft:4}}>Read More</Text> </Text>
+      <Text style={tw`text-white font-semibold mt-3 text-base`}>Size</Text>
+      <View style={tw`flex flex-row justify-between mt-4 w-full`}>
+        <Pressable style={{borderWidth:1,borderColor:"#ba572f",width:80,height:30,borderRadius:6}}><Text style={tw`text-center text-white  m-auto`}>S</Text></Pressable>
+        <Pressable style={{borderWidth:1,borderColor:"white",width:80,height:30,borderRadius:6}}><Text style={tw`text-center text-white m-auto`}>S</Text></Pressable>
+        <Pressable style={{borderWidth:1,borderColor:"white",width:80,height:30,borderRadius:6}}><Text style={tw`text-center text-white m-auto`}>S</Text></Pressable>
+      </View>
+      <View style={tw`flex flex-row w-full mt-6 `}>
+        <View style={tw`flex flex-col w-2/6`}>
+          <Text style={tw`text-white text-lg ml-3`}>Price</Text>
+          <Text style={tw`text-white text-2xl`}>
+        <Text style={{color:"#ba572f"}}>$</Text> 4.20
+        </Text>
+        </View>
+        <TouchableOpacity style={{marginLeft:10,backgroundColor:"#ba572f",flex:1,borderRadius:20}}><Text style={tw`text-white m-auto text-xl font-bold`}>Buy Now</Text></TouchableOpacity>
+      </View>
+    </ScrollView>
   )
 }
 
