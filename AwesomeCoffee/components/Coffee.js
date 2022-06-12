@@ -19,7 +19,7 @@ const Coffee = ({coffeeImage,coffeePrice,madeOf}) => {
         >
         {/* <View style={{backgroundImage:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));}}/> */}
         <Image source={coffeeImage} style={tw`rounded-md w-full h-32`} />
-        <Text style={tw`mt-1 text-white text-xl`}>Cappuccino</Text>
+        <Text style={tw`mt-1 text-white text-xl font-semibold`}>Cappuccino</Text>
         <Text style={tw` text-gray-500 text-sm`}>With {madeOf}</Text>
         <View style={tw`flex flex-row justify-between`}>
  
