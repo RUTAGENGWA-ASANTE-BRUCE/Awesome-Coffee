@@ -1,9 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
 import React from 'react'
+import {SafeAreaProvider} from "react-native-safe-area-context"
+import tw from "tailwind-react-native-classnames"
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={{backgroundColor:"#1c1717",height:"100%",paddingTop:16}}>
       <Text>HomeScreen</Text>
     </View>
   )
