@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity } from 'react-native'
-// import { LinearGradient } from "expo-linear-gradient";
+import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity,Image } from 'react-native'
+import { LinearGradient } from "expo-linear-gradient";
 import React from 'react'
 import {SafeAreaProvider} from "react-native-safe-area-context"
 import tw from "tailwind-react-native-classnames"
@@ -12,15 +12,15 @@ const HomeScreen = () => {
     <View style={tw`flex flex-row justify-between`}>
     <TouchableOpacity>
     <LinearGradient
-            colors={["#09db9f", "#48e0b5", "#1bcc9a"]}
-            start={[0, 1]}
-            end={[1, 0]}
+            colors={["#3b3b40", "#26262b",]}
+
             style={tw`rounded-md w-40 py-2.5 `}
           >
       
           
       <Icon color="white" name="apps" type="ionicon"/>
           </LinearGradient>
+          <Image source={require("../assets/avatar17.jpg")} style={tw`h-16 w-16 rounded-md`} />
     </TouchableOpacity>
     </View>
     </View>
