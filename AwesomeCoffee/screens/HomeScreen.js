@@ -5,7 +5,7 @@ import tw from "tailwind-react-native-classnames"
 
 const HomeScreen = () => {
   return (
-    <View style={{backgroundColor:"#1c1717",height:"100%",paddingTop:16}}>
+    <View style={{backgroundColor:"#0e0e12",height:"100%",paddingTop:16}}>
       <Text>HomeScreen</Text>
     </View>
   )
