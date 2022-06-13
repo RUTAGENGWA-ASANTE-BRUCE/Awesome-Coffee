@@ -1,3 +1,4 @@
+import { BlurView } from "expo-blur";
 import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity,Image,TextInput,FlatList,Pressable } from 'react-native'
 import { LinearGradient } from "expo-linear-gradient";
 import React from 'react'
@@ -19,6 +20,14 @@ const Coffee = ({coffeeImage,coffeePrice,madeOf}) => {
         >
         {/* <View style={{backgroundImage:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));}}/> */}
         <Image source={coffeeImage} style={tw`rounded-md w-full h-32`} />
+      <BlurView style={tw` rounded-tr-md absolute rounded-bl-3xl rounded-tl-none rounded-br-none   flex flex-row pl-1.5 pt-1.5   h-10 w-16 left-28`}  tint="dark" intensity={120}>
+      <View style={tw`flex-1 flex flex-row`}>
+
+      <Icon name="star" type="ionicon" style={tw`mt-0.5`} size={20} color="#ba572f" />
+      <Text style={tw`text-white text-lg ml-1`}>4.2</Text>
+      </View>
+      </BlurView>
+        
         <Text style={tw`mt-1 text-white text-xl font-semibold`}>Cappuccino</Text>
         <Text style={tw` text-gray-500 text-sm`}>With {madeOf}</Text>
         <View style={tw`flex flex-row justify-between`}>
