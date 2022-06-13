@@ -31,7 +31,7 @@ const CoffeeDetail = () => {
       }}
     >
       <Image
-        source={coffee.coffeImage}
+        source={coffee.coffeImage==1?coffee1:coffee2}
         style={tw`w-full rounded-md h-80`}
       />
       <View
