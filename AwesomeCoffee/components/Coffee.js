@@ -6,6 +6,8 @@ import {SafeAreaProvider} from "react-native-safe-area-context"
 import { useNavigation } from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames"
 import {Icon} from "react-native-elements"
+import coffee1 from '../assets/coffee2.jpg'
+import coffee2 from '../assets/coffee1.jpeg'
 import {useState} from 'react'
 import { useDispatch } from "react-redux";
 import {setChoosenCoffee} from "../slices/navSlice"
