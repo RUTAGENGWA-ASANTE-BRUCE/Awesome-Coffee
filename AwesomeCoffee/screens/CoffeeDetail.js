@@ -14,9 +14,11 @@ import { useNavigation } from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
 import React, { useState } from "react";
 import { BlurView } from "expo-blur";
+import { selectChoosenCoffee } from "../slices/navSlice";
+import {useSelector} from "react-redux"
 const CoffeeDetail = () => {
   const navigator = useNavigation();
-
+  const coffee=useSelector(selectChoosenCoffee)
   return (
     <ScrollView
       style={{
@@ -27,7 +29,7 @@ const CoffeeDetail = () => {
       }}
     >
       <Image
-        source={require("../assets/coffee2.jpg")}
+        source={coffee.coffeImage}
         style={tw`w-full rounded-md h-80`}
       />
       <View
@@ -59,11 +61,11 @@ const CoffeeDetail = () => {
    
         <View style={tw`w-6/12 h-full`}>
           <Text style={tw`mt-1 text-white font-bold text-xl`}>Cappuccino</Text>
-          <Text style={tw` text-white text-base font-bold`}>With Oat Milk</Text>
+          <Text style={tw` text-white text-base font-bold`}>{coffee.madeOf}</Text>
           <View style={tw`flex flex-row mt-5`}>
             <Icon name="star" type="ionicon" style={tw``} color="#ba572f" />
             <Text style={tw`font-semibold mt-1.5 ml-2 text-white text-xl`}>
-              4.5<Text style={tw`text-sm`}>(6.899)</Text>
+              {coffee.coffeePrice}<Text style={tw`text-sm`}>(6.899)</Text>
             </Text>
           </View>
         </View>
