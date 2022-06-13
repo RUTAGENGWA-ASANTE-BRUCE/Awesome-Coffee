@@ -5,6 +5,8 @@ import React from 'react'
 import {SafeAreaProvider} from "react-native-safe-area-context"
 import tw from "tailwind-react-native-classnames"
 import {Icon} from "react-native-elements"
+import { useDispatch } from "react-redux";
+import {setChoosenCoffee} from "../slices/navSlice"
 import {useState} from 'react'
 import Coffee from "../components/Coffee"
 import coffee1 from '../assets/coffee2.jpg'
@@ -66,7 +68,7 @@ const coffees=[
 const HomeScreen = () => {
   const [selectedItem,setSelectedItem]=useState(selections[0])
   const navigator = useNavigation();
-
+  const dispatch=useDispatch();
   return (
     <ScrollView style={tw``}>
     
