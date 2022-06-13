@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity,Image,TextInput,FlatList } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,TouchableOpacity,Image,TextInput,FlatList,ScrollView } from 'react-native'
 import { LinearGradient } from "expo-linear-gradient";
 import React from 'react'
 import {SafeAreaProvider} from "react-native-safe-area-context"
@@ -68,7 +68,7 @@ const HomeScreen = () => {
   const navigator = useNavigation();
 
   return (
-    <SafeAreaView style={tw``}>
+    <ScrollView style={tw``}>
     
     <View style={{backgroundColor:"#0e0e12",height:"100%",paddingTop:20,paddingLeft:15,paddingRight:15}}>
     <View style={tw`flex flex-row justify-between`}>
@@ -126,16 +126,7 @@ const HomeScreen = () => {
           <Text style={tw`text-xl text-white mt-1`}>Must Try !</Text>
         </View> 
         </LinearGradient>
-        <LinearGradient
-            colors={["#3b3b40", "#26262b"]}
-            style={tw`rounded-md w-full mt-2 p-2 h-60 flex flex-row justify-between `}
-        >
-        <Image source={require("../assets/coffee3.jpg")} style={tw`h-20 w-40 rounded-md`}/>
-        <View style={tw`flex flex-col p-3`}>
-          <Text style={tw`text-xl text-white`}> 5 Coffee Beans You</Text>
-          <Text style={tw`text-xl text-white mt-1`}>Must Try !</Text>
-        </View> 
-        </LinearGradient> 
+        
         <FlatList data={navigators} keyExtractor={(item)=>item.id} horizontal style={{position:"absolute",top:650,paddingLeft:15,paddingTop:5,backgroundColor:"#0e0e12",width:500,height:40}} renderItem={({item:{id,icon},item})=>(
           <TouchableOpacity>
 
@@ -143,7 +134,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         )} />
     </View>
-    </SafeAreaView>
+    </ScrollView>
   )
 }
 
