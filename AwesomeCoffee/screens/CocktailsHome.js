@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,ScrollView } from 'react-native'
 import React from 'react'
+import tw from "tailwind-react-native-classnames";
 
 const CocktailsHome = () => {
   return (
-    <View>
+    <ScrollView style={tw`pt-10`}>
       <Text>CocktailsHome</Text>
-    </View>
+    </ScrollView>
   )
 }
 
