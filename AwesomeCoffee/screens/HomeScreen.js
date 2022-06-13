@@ -60,7 +60,7 @@ const coffees=[
     id:6635,
     madeOf:"Chocolate",
     coffeePrice:3.14,
-    coffeeIamge:coffee2
+    coffeeImage:coffee2
   }
 ]
 const HomeScreen = () => {
