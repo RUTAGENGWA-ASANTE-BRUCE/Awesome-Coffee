@@ -7,13 +7,16 @@ import { useNavigation } from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames"
 import {Icon} from "react-native-elements"
 import {useState} from 'react'
-
+import { useDispatch } from "react-redux";
+import {setChoosenCoffee} from "../slices/navSlice"
 
 const Coffee = ({coffeeImage,coffeePrice,madeOf}) => {
     const navigator = useNavigation();
-
+    const dispatch=useDispatch()
   return (
-    <TouchableOpacity style={tw`mr-5`}    onPress={() => navigator.navigate("CoffeDetail")}>
+    <TouchableOpacity style={tw`mr-5`}    onPress={() =>{navigator.navigate("CoffeDetail");
+    dispatch(setChoosenCoffee({coffeeImage,coffeePrice,madeOf}))
+    }}>
     <LinearGradient
             colors={["#3b3b40", "#26262b",]}
             style={tw`rounded-md w-44 p-2 h-60 `}
