@@ -11,6 +11,7 @@ import "react-native-gesture-handler"
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import store from "./store"
+import React from 'react'
 export default function App() {
   const Stack=createNativeStackNavigator();
   return (
