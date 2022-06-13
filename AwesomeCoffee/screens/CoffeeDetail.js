@@ -49,7 +49,7 @@ const CoffeeDetail = () => {
           </LinearGradient>
         </TouchableOpacity>
 
-        <TouchableOpacity style={tw``}>
+        <TouchableOpacity style={tw``} onPress={()=>navigator.navigate("CocktailsHome")}>
           <LinearGradient
             colors={["#3b3b40", "#26262b"]}
             style={tw`rounded-md w-12 py-2.5 `}
@@ -106,21 +106,21 @@ const CoffeeDetail = () => {
       <Text style={tw`text-white mt-24 font-semibold text-base`}>
         Description
       </Text>
-      <Text style={tw`text-white text-base  mt-2`}>
+      <Text style={tw`text-white text-lg  mt-2`}>
         A cappuccino is a coffee-based drink made{" "}
       </Text>
-      <Text style={tw`text-white  text-base`}>
+      <Text style={tw`text-white  text-lg`}>
         primarly from espresso and milk...
         <Text style={{ color: "#ba572f", marginLeft: 4 }}>Read More</Text>{" "}
       </Text>
-      <Text style={tw`text-white font-semibold mt-3 text-base`}>Size</Text>
+      <Text style={tw`text-white font-semibold mt-8 text-base`}>Size</Text>
       <View style={tw`flex flex-row justify-between mt-4 w-full`}>
         <Pressable
           style={{
             borderWidth: 1,
             borderColor: "#ba572f",
-            width: 80,
-            height: 30,
+            width: 100,
+            height: 50,
             borderRadius: 6,
           }}
         >
@@ -130,8 +130,8 @@ const CoffeeDetail = () => {
           style={{
             borderWidth: 1,
             borderColor: "white",
-            width: 80,
-            height: 30,
+            width: 100,
+            height: 50,
             borderRadius: 6,
           }}
         >
@@ -141,15 +141,15 @@ const CoffeeDetail = () => {
           style={{
             borderWidth: 1,
             borderColor: "white",
-            width: 80,
-            height: 30,
+            width: 100,
+            height: 50,
             borderRadius: 6,
           }}
         >
           <Text style={tw`text-center text-white m-auto`}>S</Text>
         </Pressable>
       </View>
-      <View style={tw`flex flex-row w-full mt-6 `}>
+      <View style={tw`flex flex-row w-full mt-12 `}>
         <View style={tw`flex flex-col w-2/6`}>
           <Text style={tw`text-white text-lg ml-3`}>Price</Text>
           <Text style={tw`text-white text-2xl`}>
