@@ -9,6 +9,8 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
+import coffee1 from '../assets/coffee2.jpg'
+import coffee2 from '../assets/coffee1.jpeg'
 import { Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import tw from "tailwind-react-native-classnames";
