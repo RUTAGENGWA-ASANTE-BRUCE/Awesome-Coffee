@@ -49,7 +49,7 @@ const Samosas = () => {
      
         <View style={tw`flex flex-row justify-between`}>
             <TouchableOpacity>
-                <Image source={require("../assets/pieIcon.png")} style={tw`h-20 w-20`} />
+                <Image source={require("../assets/logo.png")} style={tw`h-20 w-20`} />
             </TouchableOpacity>
             <TouchableOpacity><Icon size={40} color="white" style={tw`mt-3`} name="ellipsis-horizontal-circle-sharp" type="ionicon"/></TouchableOpacity>
         </View>
