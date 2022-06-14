@@ -15,6 +15,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import store from "./store"
 import React from 'react'
 import HomeScreen from './screens/HomeScreen';
+import BuggersScreen from './screens/BuggersScreen';
 export default function App() {
   const Stack=createNativeStackNavigator();
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Stack.Screen name="CocktailsHome" component={CocktailsHome} options={{headerShown:false}}/>
         <Stack.Screen name="Samosas" component={Samosas} options={{headerShown:false}}/>
         <Stack.Screen name="Samosa" component={Samosa} options={{headerShown:false}}/>
+        <Stack.Screen name="BuggersScreen" component={BuggersScreen} options={{headerShown:false}}/>
       </Stack.Navigator>
 
   
