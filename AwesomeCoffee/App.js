@@ -16,6 +16,7 @@ import store from "./store"
 import React from 'react'
 import HomeScreen from './screens/HomeScreen';
 import BuggersScreen from './screens/BuggersScreen';
+import BuggerDetails from './screens/BuggerDetails';
 export default function App() {
   const Stack=createNativeStackNavigator();
   return (
@@ -38,6 +39,7 @@ export default function App() {
         <Stack.Screen name="Samosas" component={Samosas} options={{headerShown:false}}/>
         <Stack.Screen name="Samosa" component={Samosa} options={{headerShown:false}}/>
         <Stack.Screen name="BuggersScreen" component={BuggersScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="BuggerDetails" component={BuggerDetails} options={{headerShown:false}}/>
       </Stack.Navigator>
 
   
