@@ -78,7 +78,10 @@ const CoffeeHome = () => {
     
     <View style={{backgroundColor:"#0e0e12",height:"100%",paddingTop:20,paddingLeft:15,paddingRight:15}}>
     <View style={tw`flex flex-row justify-between`}>
-    <TouchableOpacity>
+    <TouchableOpacity
+            onPress={()=>navigator.navigate("HomeScreen")}
+    
+    >
     <LinearGradient
             colors={["#3b3b40", "#26262b",]}
 
@@ -86,7 +89,7 @@ const CoffeeHome = () => {
           >
       
           
-      <Icon color="white" name="apps" type="ionicon"/>
+      <Icon color="white" name="chevron-left" type="fontawesome"/>
           </LinearGradient>
     </TouchableOpacity>
           <Image source={require("../assets/avatar17.jpg")} style={tw`h-10 w-10 rounded-md`} />
