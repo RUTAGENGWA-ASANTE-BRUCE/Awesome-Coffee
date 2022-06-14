@@ -56,7 +56,7 @@ const CocktailsHome = () => {
       <View style={{backgroundColor:"#3e3e42",height:20,width:20,borderRadius:75,marginLeft:20}}>
         <Text style={tw`m-auto text-white`}>3</Text>
       </View>
-      <Image source={require('../assets/logo5.png')} style={{height:35,width:40,resizeMode:"contain",marginLeft:13}}/>
+      <Image source={require('../assets/logo.png')} style={{height:40,width:40,resizeMode:"contain",marginLeft:13}}/>
       <View style={tw`flex flex-row m-auto`}><Text style={tw`text-white text-sm`}>$</Text><Text style={tw`text-white mt-1 text-lg ml-0.5`}>20</Text></View>
       <Text style={tw`text-center text-white text-xs `}>Total Price</Text>
       </BlurView>
