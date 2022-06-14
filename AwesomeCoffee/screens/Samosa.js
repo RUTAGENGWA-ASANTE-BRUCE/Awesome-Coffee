@@ -46,21 +46,27 @@ const Samosa = () => {
   const [page,setPage]=useState(navigators[0])
   return (
     <ScrollView style={{paddingTop:17,backgroundColor:"#2c2c2e"}}>
-    <View>
+    <View >
 
-     <View style={tw`flex flex-row justify-between px-10`}>
-  
-   <TouchableOpacity
-          style={tw``}
-          onPress={() => navigator.navigate("Samosas")}
-        >
-          <View
-            style={tw`rounded-md bg-white w-12 py-2.5 absolute`}
+    <View style={tw`flex flex-row justify-between mx-3`}>
+       <TouchableOpacity
+            onPress={()=>navigator.navigate("HomeScreen")}
+    
+    >
+    <LinearGradient
+            colors={["#3b3b40", "#26262b",]}
+
+            style={tw`rounded-md w-12 py-2.5 `}
           >
-            <Icon color="black" name="chevron-left" type="fontawesome" />
-          </View>
-        </TouchableOpacity>
-            <TouchableOpacity><Icon size={40} color="white" style={tw``} name="ellipsis-horizontal-circle-sharp" type="ionicon"/></TouchableOpacity>
+      
+          
+      <Icon color="white" name="chevron-left" type="fontawesome"/>
+          </LinearGradient>
+    </TouchableOpacity>
+
+            <TouchableOpacity>
+                <Image source={require("../assets/logo.png")} style={tw`h-20 w-20`} />
+            </TouchableOpacity>
         </View>
         <Image source={require("../assets/samosas1.jpg")} style={{height:350,width:"100%",marginTop:10}}/>
         <View style={tw`mx-2 flex-1 pb-5`}>
