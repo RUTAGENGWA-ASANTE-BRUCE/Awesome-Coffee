@@ -129,7 +129,7 @@ const CoffeeHome = () => {
             colors={["#3b3b40", "#26262b"]}
             style={tw`rounded-md w-full mt-2 p-2 h-60 flex flex-row justify-between `}
         >
-        <Image source={require("../assets/coffee3.jpg")} style={tw`h-20 w-40 rounded-md`}/>
+        <Image source={require("../assets/coffee3.jpg")} style={tw`h-56 w-44 rounded-md`}/>
         <View style={tw`flex flex-col p-3`}>
           <Text style={tw`text-xl text-white`}> 5 Coffee Beans You</Text>
           <Text style={tw`text-xl text-white mt-1`}>Must Try !</Text>
