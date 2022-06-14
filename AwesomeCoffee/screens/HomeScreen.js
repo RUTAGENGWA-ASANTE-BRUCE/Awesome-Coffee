@@ -1,6 +1,5 @@
 import { TouchableOpacity,StyleSheet, Text, View ,Image,FlatList    } from 'react-native'
 import React from 'react'
-import { LinearGradient } from "expo-linear-gradient";
 import {SafeAreaProvider} from "react-native-safe-area-context"
 import { BlurView } from "expo-blur";
 import tw from "tailwind-react-native-classnames"
