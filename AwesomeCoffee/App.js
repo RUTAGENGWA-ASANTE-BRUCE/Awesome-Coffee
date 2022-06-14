@@ -14,6 +14,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import store from "./store"
 import React from 'react'
+import HomeScreen from './screens/HomeScreen';
 export default function App() {
   const Stack=createNativeStackNavigator();
   return (
@@ -28,6 +29,7 @@ export default function App() {
      keyboardVerticalOffset={Platform.OS==="ios"?-64:0}>
 
       <Stack.Navigator>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}}/>
       <Stack.Screen name="CoffeHome" component={CoffeeHome} options={{headerShown:false}}/>
         <Stack.Screen name="CoffeDetail" component={CoffeeDetail} options={{headerShown:false}}/>
         <Stack.Screen name="CocktailDetails" component={CocktailDetails} options={{headerShown:false}}/>
