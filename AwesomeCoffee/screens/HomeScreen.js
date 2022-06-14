@@ -12,6 +12,7 @@ import Coffee3 from "../assets/coffee3.jpg"
 import CockTail1 from "../assets/cocktail1.jpg"
 import SamosaImage from "../assets/samosas1.jpg"
 import cockTail2 from "../assets/cocktail2.jpg"
+import Bugger from "../assets/bugger.jpg"
 const data=[
     {
         id:74928,
@@ -46,6 +47,17 @@ const data=[
         price:19.2,
         goto:"Samosas"
     },
+    {
+      id:3395,
+      image:Bugger,
+      Name:"Creamy Bugger",
+      origin:"Cincinatti",
+      fullStars:4,
+      unFullStars:1,
+      reviews:428,
+      price:15.2,
+      goto:"BuggersScreen"
+  },
     {
         id:4004,
         image:CockTail1,
@@ -89,6 +101,7 @@ const HomeScreen = () => {
       <View style={tw`flex flex-row justify-between`}>
         <TouchableOpacity style={tw`bg-white h-10 w-10 rounded-md`}><Icon name="menu-sharp" color="black" style={tw`m-auto mt-1`} type="ionicon" /></TouchableOpacity>
         <Image source={require("../assets/logo.png")} style={{height:100,width:100,resizeMode:"contain",marginTop:-17}} />
+        
         <TouchableOpacity style={tw`bg-white h-10 w-10 rounded-md`}><Icon name="notifications-sharp" color="black" style={tw`m-auto mt-1` } type="ionicon" /></TouchableOpacity>
       </View>
 
