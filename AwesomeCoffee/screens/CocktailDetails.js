@@ -46,7 +46,7 @@ const CocktailDetails = () => {
   )} />
 </View>
 <View style={tw`flex flex-row mt-4  justify-between`}>
-  <TouchableOpacity style={{backgroundColor:"#18181b",width:200,height:45,borderRadius:10 }}><Text style={tw`m-auto text-white pt-1`}><Text style={{color:"#4e4e52",fontSize:20}}>$8</Text> Price x Drink</Text></TouchableOpacity>
+  <TouchableOpacity onPress={()=>navigator.navigate("Samosas")} style={{backgroundColor:"#18181b",width:200,height:45,borderRadius:10 }}><Text style={tw`m-auto text-white pt-1`}><Text style={{color:"#4e4e52",fontSize:20}}>$8</Text> Price x Drink</Text></TouchableOpacity>
   <TouchableOpacity style={{backgroundColor:"#18181b",width:200,height:45,borderRadius:10 }}><Text style={tw`m-auto text-white pt-1`}><Text style={{color:"#4e4e52",fontSize:20}}>$16</Text> Total Price</Text></TouchableOpacity>
 </View>
 </View>
