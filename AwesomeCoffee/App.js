@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,Platform} from 'react-native';
 import {SafeAreaProvider} from "react-native-safe-area-context"
 import {KeyboardAvoidingView} from "react-native"
 import {Provider} from "react-redux"
-import HomeScreen from './screens/HomeScreen';
+import CoffeeHome from './screens/CoffeeHome';
 import CoffeeDetail from './screens/CoffeeDetail';
 import CocktailDetails from './screens/CocktailDetails';
 import Samosas from './screens/Samosas';
@@ -28,7 +28,7 @@ export default function App() {
      keyboardVerticalOffset={Platform.OS==="ios"?-64:0}>
 
       <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}}/>
+      <Stack.Screen name="CoffeHome" component={CoffeeHome} options={{headerShown:false}}/>
         <Stack.Screen name="CoffeDetail" component={CoffeeDetail} options={{headerShown:false}}/>
         <Stack.Screen name="CocktailDetails" component={CocktailDetails} options={{headerShown:false}}/>
         <Stack.Screen name="CocktailsHome" component={CocktailsHome} options={{headerShown:false}}/>
