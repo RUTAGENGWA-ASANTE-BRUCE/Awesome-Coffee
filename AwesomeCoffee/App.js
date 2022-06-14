@@ -6,6 +6,8 @@ import {Provider} from "react-redux"
 import HomeScreen from './screens/HomeScreen';
 import CoffeeDetail from './screens/CoffeeDetail';
 import CocktailDetails from './screens/CocktailDetails';
+import Samosas from './screens/Samosas';
+import Samosa from './screens/Samosa';
 import CocktailsHome from './screens/CocktailsHome';
 import "react-native-gesture-handler"
 import { NavigationContainer } from '@react-navigation/native';
@@ -30,6 +32,8 @@ export default function App() {
         <Stack.Screen name="CoffeDetail" component={CoffeeDetail} options={{headerShown:false}}/>
         <Stack.Screen name="CocktailDetails" component={CocktailDetails} options={{headerShown:false}}/>
         <Stack.Screen name="CocktailsHome" component={CocktailsHome} options={{headerShown:false}}/>
+        <Stack.Screen name="Samosas" component={Samosas} options={{headerShown:false}}/>
+        <Stack.Screen name="Samosa" component={Samosa} options={{headerShown:false}}/>
       </Stack.Navigator>
 
   
