@@ -92,7 +92,8 @@ const CoffeeHome = () => {
       <Icon color="white" name="chevron-left" type="fontawesome"/>
           </LinearGradient>
     </TouchableOpacity>
-          <Image source={require("../assets/avatar17.jpg")} style={tw`h-10 w-10 rounded-md`} />
+    <Image source={require("../assets/logo.png")} style={{height:100,width:100,resizeMode:"contain",marginTop:-17}} />
+
     </View>
     <Text style={tw`text-3xl mt-6 text-white font-semibold`}>
       Find the best 
