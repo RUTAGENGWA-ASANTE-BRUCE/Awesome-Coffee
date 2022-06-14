@@ -32,22 +32,26 @@ const selections=[
 const navigators=[
   {
     id:712,
-    icon:"home"
+    icon:"home",
+    goto:"HomeScreen"
 
   },
   {
     id:353,
-    icon:"book"
+    icon:"book",
+    goto:"CocktailsHome"
 
   },
   {
     id:7744,
-    icon:"heart"
+    icon:"heart",
+    goto:"CoffeDetail"
 
   },
   {
     id:533,
-    icon:"notifications"
+    icon:"notifications",
+    goto:"CocktailDetails"
 
   }
 ]
@@ -110,7 +114,7 @@ const HomeScreen = () => {
       </TouchableOpacity>
     )}/>
     </View>
-    <View style={{backgroundColor:"black",opacity:0.8,left:380,position:"absolute",height:25,width:70,top:285}}/>
+    {/* <View style={{backgroundColor:"black",opacity:0.8,left:380,position:"absolute",height:25,width:70,top:285}}/> */}
     <View style={tw`flex flex-row justify-between mt-5`}>
 
     <FlatList data={coffees} keyExtractor={(item)=>item.id} renderItem={({item:{id,coffeeImage,madeOf,coffeePrice}})=>(
@@ -129,8 +133,8 @@ const HomeScreen = () => {
         </View> 
         </LinearGradient>
         
-        <FlatList data={navigators} keyExtractor={(item)=>item.id} horizontal style={{position:"absolute",top:650,paddingLeft:15,paddingTop:5,backgroundColor:"#0e0e12",width:500,height:40}} renderItem={({item:{id,icon},item})=>(
-          <TouchableOpacity>
+        <FlatList data={navigators} keyExtractor={(item)=>item.id} horizontal style={{paddingLeft:15,paddingTop:5,backgroundColor:"#0e0e12",width:500,height:40}} renderItem={({item:{id,icon,goto},item})=>(
+          <TouchableOpacity onPress={()=>navigator.navigate(goto)}>
 
           <Icon name={icon} type="ionicon"  color={item.icon=="home"?"#ba572f":"#454341"} style={tw`mr-20`} />
           </TouchableOpacity>
