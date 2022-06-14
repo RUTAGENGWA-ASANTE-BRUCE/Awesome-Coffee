@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View,ScrollView,Image,FlatList,TouchableOpacity } from 'react-native'
 import React,{ useState} from 'react'
-import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
 import tw from "tailwind-react-native-classnames";
 import { useNavigation } from "@react-navigation/native";
@@ -47,12 +46,26 @@ const Samosas = () => {
   return (
     <ScrollView style={{paddingTop:17,padding:20,paddingBottom:10,backgroundColor:"#2c2c2e"}}>
      
-        <View style={tw`flex flex-row justify-between`}>
+     <View style={tw`flex flex-row justify-between`}>
+       <TouchableOpacity
+            onPress={()=>navigator.navigate("HomeScreen")}
+    
+    >
+    <LinearGradient
+            colors={["#3b3b40", "#26262b",]}
+
+            style={tw`rounded-md w-12 py-2.5 `}
+          >
+      
+          
+      <Icon color="white" name="chevron-left" type="fontawesome"/>
+          </LinearGradient>
+    </TouchableOpacity>
+
             <TouchableOpacity>
                 <Image source={require("../assets/logo.png")} style={tw`h-20 w-20`} />
             </TouchableOpacity>
-            <TouchableOpacity><Icon size={40} color="white" style={tw`mt-3`} name="ellipsis-horizontal-circle-sharp" type="ionicon"/></TouchableOpacity>
-        </View>
+        </View> 
         <Text style={tw`text-xl font-bold text-white mt-2`}>Types of Samosa</Text>
         <Text style={tw`text-sm  text-gray-400`}>Select favorite samosa dish</Text>
         <View style={tw`flex mt-3 flex-row w-5/6 justify-between`}>
