@@ -17,6 +17,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import Steak1 from "../assets/steak1.jpg";
 import Steak2 from "../assets/steak2.jpg";
+import Steak3 from "../assets/steak3.jpg";
+import Steak4 from "../assets/steak4.jpg";
 const Steak = () => {
   const navigator = useNavigation();
   const steak = useSelector(selectChoosenSteak);
@@ -31,7 +33,7 @@ const Steak = () => {
       }}
     >
       <View style={tw`flex flex-row justify-between`}>
-        <TouchableOpacity onPress={() => navigator.navigate("HomeScreen")}>
+        <TouchableOpacity onPress={() => navigator.navigate("SteaksScreen")}>
            <LinearGradient
            colors={["#3b3b40", "#26262b"]}
             style={tw`rounded-md w-12 py-2.5 `}
@@ -46,7 +48,7 @@ const Steak = () => {
       </View>
 
       <Image
-        source={steak.ingredients == "Grilled steak with viggie & potatoes" ? Steak1 : Steak2}
+        source={steak.ingredients == "Grilled steak with viggie & potatoes" ? Steak1 :steak.ingredients=="Ribeye steak with viggie & potatoes"?Steak2:steak.ingredients=="Grilled steak with viggie & potatoes"?Steak3:Steak4}
         style={{
           height: 400,
           width: "100%",
