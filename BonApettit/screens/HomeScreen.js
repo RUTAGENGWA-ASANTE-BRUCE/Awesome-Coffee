@@ -12,6 +12,8 @@ import CockTail1 from "../assets/cocktail1.jpg"
 import SamosaImage from "../assets/samosas1.jpg"
 import cockTail2 from "../assets/cocktail2.jpg"
 import Bugger from "../assets/bugger.jpg"
+import Steak1 from "../assets/steak1.jpg"
+import Steak2 from "../assets/steak2.jpg"
 const data=[
     {
         id:74928,
@@ -47,6 +49,18 @@ const data=[
         goto:"Samosas"
     },
     {
+      id:858547444,
+      image:Steak1,
+      Name:"Beef Steak",
+      origin:"Kentucky",
+      fullStars:2,
+      unFullStars:3,
+      reviews:64,
+      price:34.2,
+      goto:"SteaksScreen"
+  },
+  
+    {
       id:3395,
       image:Bugger,
       Name:"Creamy Bugger",
@@ -79,6 +93,18 @@ const data=[
         price:14.5,
         goto:"CoffeHome"
     },
+    {
+      id:98244,
+      image:Steak2,
+      Name:"Grilled Steak",
+      origin:"Kigali",
+      fullStars:2,
+      unFullStars:3,
+      reviews:242,
+      price:50.9,
+      goto:"SteaksScreen"
+  },
+  
     {
         id:740638,
         image:Coffee3,
