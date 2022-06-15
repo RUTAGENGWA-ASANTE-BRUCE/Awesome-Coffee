@@ -68,12 +68,12 @@ const Samosas = () => {
         </View> 
         <Text style={tw`text-xl font-bold text-white mt-2`}>Types of Samosa</Text>
         <Text style={tw`text-sm  text-gray-400`}>Select favorite samosa dish</Text>
-        <View style={tw`flex mt-3 flex-row w-5/6 justify-between`}>
+        <View style={tw`flex mt-10 flex-row w-5/6 justify-between`}>
             <View style={{backgroundColor:"#fdba74",height:10,width:100,borderRadius:10}}/>
             <View style={{backgroundColor:"#fdba74",height:10,width:80,borderRadius:10}}/>
             <View style={{backgroundColor:"#fdba74",height:10,width:60,borderRadius:10}}/>
         </View>
-        <View style={tw`flex flex-row mt-10`}>
+        <View style={tw`flex flex-row mt-12`}>
 
         <LinearGradient
             colors={["#3b3b40", "#26262b"]}
@@ -97,7 +97,7 @@ const Samosas = () => {
          </TouchableOpacity>
         </LinearGradient>
         </View>
-        <View style={{backgroundColor:"#18181b",height:80,width:"100%",borderRadius:20,marginTop:40}}>
+        <View style={{backgroundColor:"#18181b",height:80,width:"100%",borderRadius:20,marginTop:60}}>
       <FlatList data={navigators} horizontal keyExtractor={(item)=>item.id}  style={tw`p-4`} renderItem={({item:{id,title,icon,goto},item})=>(
           <TouchableOpacity onPress={()=>{setPage(item);navigator.navigate(goto)}} style={tw`flex flex-col  w-28 ${page.id==id && "bg-gray-700"} rounded-3xl pl-2 mr-5  `}><Icon name={icon} type="ionicon"color="white" style={tw` mr-1.5`} size={20} />{page.id==id &&<Text style={tw`text-white text-base font-semibold text-center `}>{title}</Text>}</TouchableOpacity>
         )} />
