@@ -15,6 +15,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import store from "./store"
 import React from 'react'
 import HomeScreen from './screens/HomeScreen';
+import Steak from './screens/Steak';
+import SteaksScreen from './screens/SteaksScreen';
 import BuggersScreen from './screens/BuggersScreen';
 import BuggerDetails from './screens/BuggerDetails';
 export default function App() {
@@ -40,6 +42,8 @@ export default function App() {
         <Stack.Screen name="Samosa" component={Samosa} options={{headerShown:false}}/>
         <Stack.Screen name="BuggersScreen" component={BuggersScreen} options={{headerShown:false}}/>
         <Stack.Screen name="BuggerDetails" component={BuggerDetails} options={{headerShown:false}}/>
+        <Stack.Screen name="SteaksScreen" component={SteaksScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Steak" component={Steak} options={{headerShown:false}}/>
       </Stack.Navigator>
 
   
