@@ -77,17 +77,15 @@ const Steak = () => {
       <Text style={tw`text-white  text-xl font-semibold  mt-1`}>Ingredients</Text>
      
       <BlurView
-              style={{width:620,height:300,borderTopRightRadius:500,borderTopLeftRadius:500,top:700,right:-86,position:"absolute"}}
+              style={{width:620,height:300,borderTopRightRadius:500,display:"flex",flexDirection:"column",borderTopLeftRadius:500,top:700,right:-86,position:"absolute"}}
               tint="light"
               intensity={100}
             >
+            <Icon color="black" name="caret-down-outline" type="ionicon" style={tw`mt-6 mx-auto`}/>
+            <Text style={tw`text-black text-lg font-semibold mt-2 mx-auto`}>Show more details</Text>
             </BlurView>
-            <View style={tw`absolute bottom-8 left-7 flex h-10 w-10 bg-black rounded-full`}>
-
-          <Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-tomato-48.png")}/>
-            </View>
-
-            <View style={tw`absolute bottom-8 left-7 flex h-10 w-10 bg-black rounded-full`}>
+            
+            <View style={tw`absolute bottom-5 left-5 flex h-10 w-10 bg-black rounded-full`}>
 
 <Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-tomato-48.png")}/>
   </View>
@@ -95,13 +93,13 @@ const Steak = () => {
 
 <Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-potato-48.png")}/>
   </View>
-  <View style={tw`absolute bottom-16 left-60 flex h-10 w-10 bg-black rounded-full`}>
+  <View style={tw`absolute bottom-16 mb-1 left-60 ml-12 flex h-10 w-10 bg-black rounded-full`}>
 
 <Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-sauce-bottle-48.png")}/>
   </View>
-  <View style={tw`absolute bottom-8 left-7 flex h-10 w-10 bg-black rounded-full`}>
+  <View style={tw`absolute bottom-12 left-80 ml-16 -mb-4  flex h-10 w-10 bg-black rounded-full`}>
 
-<Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-tomato-48.png")}/>
+<Image style={tw`h-8 w-7 m-auto `} source={require("../assets/icons8-mustard-48.png")}/>
   </View>
     </View>
   );
