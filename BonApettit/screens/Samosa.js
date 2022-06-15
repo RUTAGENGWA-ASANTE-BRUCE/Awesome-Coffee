@@ -50,7 +50,7 @@ const Samosa = () => {
 
     <View style={tw`flex flex-row justify-between mx-3`}>
        <TouchableOpacity
-            onPress={()=>navigator.navigate("HomeScreen")}
+            onPress={()=>navigator.navigate("Samosas")}
     
     >
     <LinearGradient
@@ -68,7 +68,7 @@ const Samosa = () => {
                 <Image source={require("../assets/logo.png")} style={tw`h-20 w-20`} />
             </TouchableOpacity>
         </View>
-        <Image source={require("../assets/samosas1.jpg")} style={{height:350,width:"100%",marginTop:10}}/>
+        <Image source={require("../assets/samosas1.jpg")} style={{height:320,width:"100%",marginTop:10}}/>
         <View style={tw`mx-2 flex-1 pb-5`}>
 
       <BlurView style={tw` rounded-3xl rounded-3xl   flex flex-col px-5 pt-6    h-full w-full  bg-red-200 mt-3`}  tint="dark" intensity={100}>
