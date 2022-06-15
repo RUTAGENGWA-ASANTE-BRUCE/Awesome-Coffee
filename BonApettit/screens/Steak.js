@@ -46,7 +46,7 @@ const Steak = () => {
       </View>
 
       <Image
-        source={steak.image == 1 ? Steak1 : Steak2}
+        source={steak.ingredients == "Grilled steak with viggie & potatoes" ? Steak1 : Steak2}
         style={{
           height: 400,
           width: "100%",
